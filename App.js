@@ -11,12 +11,12 @@ const FlexDimensionBasics = require('./component/FlexDimensionBasics');
 export default class Main extends Component {
   render() {
     return(
-      <View style={{flex: 1}}>
+      <View style={{flex: 10}}>
         <View style={{flex: 1}}>
           <HelloWorld/>
           <Blink text='aha!!'/>
           <Greetings name='gao' />
-          <Greetings name='lan'/>
+          
           <Banana/>
           <LotsOfStyles/>
         </View>
