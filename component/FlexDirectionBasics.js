@@ -6,10 +6,10 @@ class FlexDirectionBasics extends Component {
 		return(
 			<View style={{flex: 1}}>
 				<View style={{flex: 1}}>
-					<View style={{flex: 1, backgroundColor: 'powderblue'}}/>
-					<View style={{flex: 10, backgroundColor: 'steelblue' }}/>
+					<View style={{ backgroundColor: 'powderblue'}}/>
+					<View style={{ backgroundColor: 'steelblue' }}/>
 				</View>
-				<View style={{flex: 1}}>
+				<View style={{flex: 2}}>
 				</View>
 			</View>
 		);
