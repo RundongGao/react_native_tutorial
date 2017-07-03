@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, Image, View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 
 const HelloWorld = require('./component/HelloWorld');
 const Greetings = require('./component/Greetings');
@@ -12,13 +12,15 @@ export default class Main extends Component {
   render() {
     return(
       <View style={{flex: 1}}>
-        <HelloWorld/>
-        <Blink text='aha!!'/>
-        <Greetings name='gao'/>
-        <Greetings name='lan'/>
-        <Banana/>
-        <LotsOfStyles/>
-        <FlexDimensionBasics/>
+        <View style={{flex: 1}}>
+          <HelloWorld/>
+          <Blink text='aha!!'/>
+          <Greetings name='gao' />
+          <Greetings name='lan'/>
+          <Banana/>
+          <LotsOfStyles/>
+        </View>
+        <FlexDimensionBasics style={{flex: 3}}/>
       </View>
      );
   }
