@@ -16,7 +16,7 @@ export default class Main extends Component {
           <HelloWorld/>
           <Blink text='aha!!'/>
           <Greetings name='gao' />
-          <Greetings name='lan'/>
+          
           <Banana/>
           <LotsOfStyles/>
         </View>
