@@ -1,27 +1,40 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, TabBarIOS } from 'react-native';
 
-const HelloWorld = require('./component/HelloWorld');
-const Greetings = require('./component/Greetings');
-const Blink = require('./component/Blink');
-const Banana = require('./component/Banana');
-const LotsOfStyles = require('./component/LotsOfStyles');
-const FlexDimensionBasics = require('./component/FlexDimensionBasics');
+const Feature = require('./component/Feature');
 
-export default class Main extends Component {
+export default class Bookshare extends Component {
+   constructor(props) {
+        super(props);
+        this.state = {
+            selectedTab: 'featured'
+        };
+    }
+
   render() {
     return(
-      <View>
-        <View>
-          <HelloWorld/>
-          <Blink text='aha!!'/>
-          <Greetings name='gao' />
-          <Greetings name='lan'/>
-          <Banana/>
-          <LotsOfStyles/>
-        </View>
-        <FlexDimensionBasics/>
-      </View>
+       <TabBarIOS selectedTab={this.state.selectedTab}>
+                <TabBarIOS.Item
+                    selected={this.state.selectedTab === 'featured'}
+                    systemIcon="featured"
+                    onPress={() => {
+                        this.setState({
+                            selectedTab: 'featured'
+                        });
+                    }}>
+                    <Feature/>
+                </TabBarIOS.Item>
+                <TabBarIOS.Item
+                    selected={this.state.selectedTab === 'search'}
+                    systemIcon="search"
+                    onPress={() => {
+                        this.setState({
+                            selectedTab: 'search'
+                        });
+                    }}>
+                    <Feature/>
+                </TabBarIOS.Item>
+            </TabBarIOS>
      );
   }
 }
